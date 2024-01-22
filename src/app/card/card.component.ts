@@ -16,10 +16,13 @@ export class CardComponent {
   })
   robot: IRobot;
 
-  @Input({
-    required: true,
-  })
-  isEven: boolean = false;
+  // @Input({
+  //   required: true,
+  // })
+  // isEven: boolean = false;
+  
+  @Output()
+  robotSelected = new EventEmitter<IRobot>();
 
   constructor() {
     this.robot = {
@@ -27,6 +30,7 @@ export class CardComponent {
       name: 'Robot',
       username: 'robot',
       email: 'robot@email.com',
+      // iconUrl: ""
     };
     
   }
@@ -34,9 +38,10 @@ export class CardComponent {
 
   onRobotClicked() {
     console.log('onRobotClicked', this.robot?.id);
+    this.robotSelected.emit(this.robot);
   }
 
-  applyEvenStyle() {
-    return "is-even"
-  }
+  // applyEvenStyle() {
+  //   return "is-even"
+  // }
 }

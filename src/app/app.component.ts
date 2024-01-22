@@ -15,17 +15,23 @@ import { ROBOTS } from '../../robots.data';
 })
 
 export class AppComponent {
-  title = 'my-first-project';
-  robots: IRobot[] = [];
+  // title = 'my-first-project';
+  // robots: IRobot[] = [];
 
-  searchTerm: string = '';
+  // searchTerm: string = '';
 
-  constructor() {
-    this.robots = ROBOTS;
+  // constructor() {
+  //   this.robots = ROBOTS;
+  // }
+
+  // onRobotClicked(robot: IRobot): void {
+  //   console.log('onRobotClicked', robot);
+  // }
+  robots: IRobot[] = ROBOTS
+
+  handleEvent(robot:IRobot){
+    console.log(robot);
   }
-
-  onRobotClicked(robot: IRobot): void {
-    console.log('onRobotClicked', robot);
-  }
+  
 
 }

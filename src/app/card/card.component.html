@@ -1,4 +1,5 @@
-<article class="mw5 center bg-light-green br3 pa3 pa4-ns mv3 ba b--black-10 {{isEven && applyEvenStyle()}}">
+<article class="mw5 center bg-light-green br3 pa3 pa4-ns mv3 ba b--black-10 ">
+  <!-- {{isEven && applyEvenStyle()}} -->
     <div class="tc">
       <img src="https://robohash.org/{{ robot.username }}?size=200x200&set=set3" class="br-100 h4 w4 dib ba b--red-05 pa2" title="Photo of a {{robot.name}}">
       <h1 class="f3 mb2">{{robot.name}}</h1>
@@ -9,6 +10,12 @@
       class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue"
       (click)="onRobotClicked()"
     >
-      View Robot
+      Click Robot
     </button>
+    <button
+    class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue"
+    (click)="onRobotClicked()"
+  >
+    View Robot
+  </button>
   </article>

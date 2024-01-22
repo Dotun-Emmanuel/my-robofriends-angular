@@ -8,10 +8,14 @@
     />
   </div>
   <div class="scroll">
-      @for (robot of robots; track $index) {
+      <!-- @for (robot of robots; track $index) {
         <!-- Custom event -->
-          <robot-card [robot]="robot" [isEven]="$even"/>
-      }
+          <!-- <robot-card [robot]="robot" [isEven]="$even"/> -->
+          <!-- <robot-card [robot]="robot" [isEven]="$even"/> -->
+      <!-- } --> -->
+      <robot-card [robot]="robots[0]" (robotSelected)="handleEvent($event)"/>
+      <robot-card [robot]="robots[1]" (robotSelected)="handleEvent($event)"/>
+      <robot-card [robot]="robots[2]" (robotSelected)="handleEvent($event)"/>
     </div>
 </div>
 
